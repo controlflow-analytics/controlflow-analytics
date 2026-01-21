@@ -1,11 +1,27 @@
+/* ---------- Design Tokens ---------- */
+
 :root {
-  --bg: #0b0e14;
-  --fg: #e6e8eb;
-  --muted: #a0a6b0;
-  --accent: #4f8cff;
-  --card: #151a24;
-  --border: #242a38;
+  /* Text */
+  --text-primary: #e6e8f0;
+  --text-secondary: #aeb3c7;
+  --text-tertiary: #7c819a;
+
+  /* Brand */
+  --accent-primary: #4c5fd5;
+
+  /* Surfaces */
+  --bg-primary: #2b2e43;
+  --bg-surface: #343854;
+
+  /* Signals */
+  --signal-success: #3fb984;
+  --signal-warning: #e6b450;
+
+  /* UI */
+  --divider: #404567;
 }
+
+/* ---------- Base ---------- */
 
 * {
   box-sizing: border-box;
@@ -13,22 +29,25 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Inter, Helvetica, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--fg);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
 }
 
 a {
-  color: var(--accent);
+  color: var(--accent-primary);
   text-decoration: none;
 }
 
-header {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem 2rem;
+/* ---------- Typography ---------- */
+
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+  color: var(--text-primary);
 }
 
 h1 {
@@ -48,48 +67,61 @@ h3 {
 
 p {
   max-width: 760px;
-  color: var(--muted);
+  color: var(--text-secondary);
 }
 
-.tagline {
-  font-size: 1.2rem;
-  color: var(--fg);
+.brand-tagline {
   margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--text-primary);
 }
 
-.container {
+/* ---------- Layout ---------- */
+
+.site-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 2rem;
+}
+
+.content-section {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem 4rem;
 }
 
-.grid {
+.card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
+/* ---------- Components ---------- */
+
+.info-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--divider);
   border-radius: 10px;
   padding: 1.5rem;
 }
 
-.cta {
-  margin-top: 2rem;
+.primary-cta {
   display: inline-block;
+  margin-top: 2rem;
   padding: 0.75rem 1.4rem;
   border-radius: 6px;
-  background: var(--accent);
+  background: var(--accent-primary);
   color: #ffffff;
   font-weight: 500;
+  font-family: "Space Grotesk", Inter, sans-serif;
 }
 
-footer {
-  border-top: 1px solid var(--border);
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--divider);
   padding: 2rem 1.5rem;
   text-align: center;
-  color: var(--muted);
+  color: var(--text-tertiary);
 }
