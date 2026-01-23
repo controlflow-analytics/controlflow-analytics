@@ -33,20 +33,22 @@
   </nav>
 
   <header class="hero-section">
-    <h1>ControlFlow Analytics</h1>
-    <div class="brand-tagline">Validated pipelines for data-driven systems</div>
+    <div class="hero-container">
+      <h1>ControlFlow Analytics</h1>
+      <div class="brand-tagline">Validated pipelines for data-driven systems</div>
 
-    <p class="hero-intro"><strong>Built on statistics, not shortcuts.</strong></p>
+      <p class="hero-intro"><strong>Built on statistics, not shortcuts.</strong></p>
 
-    <p class="hero-description">
-      ControlFlow Analytics helps organizations extract reliable insight from
-      complex data by applying rigorous statistical analysis, validated machine
-      learning pipelines, and controlled AI integration. Every system is designed
-      with feedback loops, drift detection, and retraining logic built in.
-    </p>
+      <p class="hero-description">
+        ControlFlow Analytics helps organizations extract reliable insight from
+        complex data by applying rigorous statistical analysis, validated machine
+        learning pipelines, and controlled AI integration. Every system is designed
+        with feedback loops, drift detection, and retraining logic built in.
+      </p>
 
-    <div class="hero-actions">
-      <a href="#contact" class="primary-cta">Start a conversation</a>
+      <div class="hero-actions">
+        <a href="#contact" class="primary-cta">Start a conversation</a>
+      </div>
     </div>
   </header>
 
@@ -104,8 +106,8 @@
       <h2>Services</h2>
     </div>
 
-    <div class="card-grid">
-      <div class="info-card">
+    <div class="bento-grid">
+      <div class="bento-item featured">
         <h3>Data & Model Audits</h3>
         <p>
           Deep evaluation of data quality, statistical assumptions, model
@@ -114,16 +116,15 @@
         </p>
       </div>
 
-      <div class="info-card">
-        <h3>Predictive Modeling & Forecasting</h3>
+      <div class="bento-item">
+        <h3>Predictive Modeling</h3>
         <p>
-          Time-series forecasting, regression, segmentation, survival analysis,
-          and Bayesian modeling built for interpretability and robustness.
+          Time-series forecasting, regression, and Bayesian modeling built for interpretability and robustness.
         </p>
       </div>
 
-      <div class="info-card">
-        <h3>AI Integration & Optimization</h3>
+      <div class="bento-item">
+        <h3>AI Optimization</h3>
         <p>
           Cost-aware AI pipelines using prompt engineering, APIs, and SDKs,
           integrated only where they add measurable value.
@@ -154,6 +155,24 @@
       <div class="footer-tech-stack">Built with Python, SQL, R & AWS</div>
     </div>
   </footer>
+
+  <script>
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.info-card.glass').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
 
 </body>
 </html>
