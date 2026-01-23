@@ -13,14 +13,14 @@
   /* Surfaces */
   --bg-primary: #0b0e14; 
   --bg-surface: #151a24;
-  --bg-alt: #f4f6f9; /* New light background for section contrast */
+  --bg-alt: #f4f6f9; /* Light contrast section */
 
   /* UI Dividers */
   --divider: #242a38;
   --divider-light: #d1d5db;
 }
 
-/* ---------- Base ---------- */
+/* ---------- Base & Layout ---------- */
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -75,12 +75,22 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  transition: color 0.2s;
 }
 
-/* ---------- Section Contrast ---------- */
+.nav-links a:hover { color: var(--text-primary); }
+
+.nav-cta {
+  border: 1px solid var(--accent-primary) !important;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  margin-left: 1rem;
+}
+
+/* ---------- Content Sections ---------- */
 
 .content-section {
-  max-width: 100%;
+  width: 100%;
   padding: 10rem 1.5rem;
 }
 
@@ -89,53 +99,77 @@ body {
   margin: 0 auto;
 }
 
-/* The "Light" Break Section */
+/* ---------- Alternating Backgrounds ---------- */
 .section-alt {
   background: var(--bg-alt);
   color: var(--text-dark);
 }
 
-.section-alt h2, .section-alt h3 {
-  color: var(--text-dark);
-}
-
-.section-alt .divider-line {
-  border-color: var(--divider-light);
-}
-
-.section-alt .stack-body p {
-  color: #4b5563;
-}
+.section-alt h2, .section-alt h3 { color: var(--text-dark); }
+.section-alt .stack-body p { color: #4b5563; }
+.section-alt .lambda-stack { border-top-color: var(--divider-light); }
+.section-alt .stack-item { border-bottom-color: var(--divider-light); }
 
 /* ---------- Stack ---------- */
 
 .lambda-stack {
   border-top: 1px solid var(--divider);
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .stack-item {
   border-bottom: 1px solid var(--divider);
   padding: 5rem 0;
   display: grid;
-  grid-template-columns: 120px 1.5fr 2fr;
-  gap: 3rem;
+  grid-template-columns: 100px 1.5fr 2fr;
+  gap: 2rem;
   align-items: start;
 }
 
 .stack-num {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: var(--accent-primary);
 }
 
 .stack-title h3 {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   margin: 0;
-  line-height: 0.9;
-  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.stack-body p {
+  font-size: 1.15rem;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* ---------- Services Grid ---------- */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1px;
+  background: var(--divider);
+  border: 1px solid var(--divider);
+  margin-top: 3rem;
+}
+
+.service-card {
+  padding: 4rem 2.5rem;
+  background: var(--bg-primary);
+}
+
+.service-card h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-card p {
+  color: var(--text-secondary);
 }
 
 /* ---------- Footer ---------- */
@@ -143,7 +177,10 @@ body {
 .site-footer {
   text-align: center;
   padding: 10rem 1.5rem;
-  background: var(--bg-primary);
   border-top: 1px solid var(--divider);
-  color: var(--text-tertiary);
+}
+
+@media (max-width: 900px) {
+  .stack-item { grid-template-columns: 1fr; gap: 1rem; padding: 3rem 0; }
+  .main-nav { width: 90%; }
 }
