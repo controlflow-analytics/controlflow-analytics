@@ -11,7 +11,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>ControlFlow Analytics</title>
+  <title>ControlFlow Analytics | Validated Data Pipelines</title>
   <meta
     name="description"
     content="ControlFlow Analytics builds validated pipelines for data-driven systems. Statistics first. No shortcuts."
@@ -21,30 +21,45 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="logo">ControlFlow<span>.</span></div>
+      <div class="nav-links">
+        <a href="#approach">Approach</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-section">
     <h1>ControlFlow Analytics</h1>
     <div class="brand-tagline">Validated pipelines for data-driven systems</div>
 
-    <p><strong>Built on statistics, not shortcuts.</strong></p>
+    <p class="hero-intro"><strong>Built on statistics, not shortcuts.</strong></p>
 
-    <p>
+    <p class="hero-description">
       ControlFlow Analytics helps organizations extract reliable insight from
       complex data by applying rigorous statistical analysis, validated machine
       learning pipelines, and controlled AI integration. Every system is designed
       with feedback loops, drift detection, and retraining logic built in.
     </p>
 
-    <a href="#contact" class="primary-cta">Start a conversation</a>
+    <div class="hero-actions">
+      <a href="#contact" class="primary-cta">Start a conversation</a>
+    </div>
   </header>
 
-  <!-- How I Work -->
-  <section class="content-section">
-    <h2>How I Work</h2>
+  <section id="approach" class="content-section">
+    <div class="section-header">
+      <span class="eyebrow">Methodology</span>
+      <h2>How I Work</h2>
+    </div>
 
     <div class="card-grid">
-      <div class="info-card">
-        <h3>1. Statistical Foundation</h3>
+      <div class="info-card glass">
+        <div class="card-step">01</div>
+        <h3>Statistical Foundation</h3>
         <p>
           Thorough exploratory analysis, classical statistical testing, and
           distributional validation to understand signal, bias, and uncertainty
@@ -52,8 +67,9 @@
         </p>
       </div>
 
-      <div class="info-card">
-        <h3>2. Controlled Modeling</h3>
+      <div class="info-card glass">
+        <div class="card-step">02</div>
+        <h3>Controlled Modeling</h3>
         <p>
           Supervised and unsupervised models are applied with strict validation,
           segmentation checks, and multivariate analysis to identify structure
@@ -61,8 +77,9 @@
         </p>
       </div>
 
-      <div class="info-card">
-        <h3>3. AI as a Final Layer</h3>
+      <div class="info-card glass">
+        <div class="card-step">03</div>
+        <h3>AI as a Final Layer</h3>
         <p>
           AI models receive only the most relevant, validated information,
           reducing hallucination, cost, and latency while improving accuracy
@@ -70,8 +87,9 @@
         </p>
       </div>
 
-      <div class="info-card">
-        <h3>4. Continuous Control</h3>
+      <div class="info-card glass">
+        <div class="card-step">04</div>
+        <h3>Continuous Control</h3>
         <p>
           Discarded samples and edge cases are analyzed separately to monitor
           drift, performance degradation, and retraining triggers over time.
@@ -80,9 +98,11 @@
     </div>
   </section>
 
-  <!-- Services -->
-  <section class="content-section">
-    <h2>Services</h2>
+  <section id="services" class="content-section">
+    <div class="section-header">
+      <span class="eyebrow">Expertise</span>
+      <h2>Services</h2>
+    </div>
 
     <div class="card-grid">
       <div class="info-card">
@@ -112,26 +132,27 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="content-section" id="contact">
-    <h2>Contact</h2>
-
-    <p>
-      If you’re dealing with unreliable models, noisy data, or AI systems you
-      don’t fully trust, let’s talk.
-    </p>
-
-    <p>
-      Email:
-      <a href="mailto:contact@controlflowanalytics.com">
-        contact@controlflowanalytics.com
-      </a>
-    </p>
+  <section class="content-section footer-contact" id="contact">
+    <div class="contact-card">
+      <h2>Get in touch</h2>
+      <p>
+        If you’re dealing with unreliable models, noisy data, or AI systems you
+        don’t fully trust, let’s talk.
+      </p>
+      <div class="contact-details">
+        <span class="label">Primary Contact: Gaby Novo</span>
+        <a href="mailto:contact@controlflowanalytics.com" class="email-link">
+          contact@controlflowanalytics.com
+        </a>
+      </div>
+    </div>
   </section>
 
-  <!-- Footer -->
   <footer class="site-footer">
-    © 2026 ControlFlow Analytics
+    <div class="footer-container">
+      <div class="footer-copyright">© 2026 ControlFlow Analytics</div>
+      <div class="footer-tech-stack">Built with Python, SQL, R & AWS</div>
+    </div>
   </footer>
 
 </body>
